@@ -44,6 +44,9 @@ app.put("/api/notifications/:id/read", async (req, res) => {
   res.json({ success: true });
 });
 
+app.get("/", (req, res) => {
+  res.send("Notify backend is live 🚀");
+});
 // Socket.io connection
 io.on("connection", (socket) => {
   console.log("⚡ User connected:", socket.id);
